@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { ResumeTemplate } from '@/components/ResumeTemplate';
 import { ResumeData } from '@/lib/resumeTypes';
 import { downloadDOCX } from '@/lib/exportUtils';
@@ -10,7 +10,6 @@ import { ArrowLeft, FileText, Download } from 'lucide-react';
 
 export default function PreviewPage() {
     const router = useRouter();
-    const searchParams = useSearchParams();
     const [resumeData, setResumeData] = useState<ResumeData | null>(null);
     const resumeRef = useRef<HTMLDivElement>(null);
 
